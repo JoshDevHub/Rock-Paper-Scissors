@@ -1,0 +1,49 @@
+/* Universal Styles & Resets */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Open Sans';
+  font-size: 16px;
+  text-align: center;
+  background-color: #15141e;
+  color: white;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Other Styles */
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.button-container {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+}
+
+/* More styling needed */
+button {
+  padding: 5em;
+}
+
+/* TODO Play with color scheme */
+
