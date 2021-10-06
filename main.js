@@ -2,13 +2,14 @@ const rpsArray = ['rock', 'paper', 'scissors'];
 
 const computerPlay =() => rpsArray[Math.floor(Math.random() * 3)];
 
-const getUserInput = () => {
-  const userInput = prompt('Choose Rock, Paper, or Scissors').toLowerCase();
-  const userInputLowerCase = userInput.toLowerCase();
-  if (rpsArray.includes(userInputLowerCase)) return userInputLowerCase;
-  console.log('You didn\'t input one of the correct choices!');
-  return getUserInput();
+const buttons = document.querySelectorAll('button');
+const getUserInput = (event) => {
+  console.log(event.target.className);
+  return event.target.className;
 }
+
+buttons.forEach(button => button.addEventListener('click', getUserInput));
+
 
 // Function to play a single round of rock, paper, scissors
 const playRound = (userChoice, computerChoice) => {
@@ -59,5 +60,3 @@ const game = () => {
   }
   return 'Error';
 }
-
-console.log(game());
