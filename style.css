@@ -45,5 +45,15 @@ button {
   padding: 5em;
 }
 
+.modal-box {
+  display: none;
+  position: fixed;
+  z-index: 1;
+}
+
+.modal-show {
+  display: block;
+}
+
 /* TODO Play with color scheme */
 
