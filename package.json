@@ -1,0 +1,23 @@
+{
+  "name": "odin-rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "This is a project done as part of [The Odin Project](https://www.theodinproject.com/)",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmsmith1018/tod-rock-paper-scissors.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmsmith1018/tod-rock-paper-scissors/issues"
+  },
+  "homepage": "https://github.com/jmsmith1018/tod-rock-paper-scissors#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}
