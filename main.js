@@ -48,9 +48,17 @@ const trackScore = (result) => {
   scoreDisplay.textContent = `The score is You: ${userScore} - Computer: ${computerScore}`;
 };
 
-const buttons = document.querySelectorAll("button");
+const resetGame = () => {
+  const modalBox = document.querySelector('.modal-box');
+  modalBox.classList.remove('.modal-show');
+  computerScore = 0;
+  userScore = 0;
+}
 
-const clickHandler = (event) => {
+const resetButton = document.querySelector('.modal-btn');
+resetButton.addEventListener('click', resetGame);
+
+const rpsClickHandler = (event) => {
   console.log(event.target.className);
   const userInput = event.target.className;
   const computerInput = computerPlay();
@@ -60,4 +68,5 @@ const clickHandler = (event) => {
   showGameOverModal();
 };
 
-buttons.forEach((button) => button.addEventListener('click', clickHandler));
+const rpsButtons = document.querySelectorAll("rps-btn");
+rpsButtons.forEach((button) => button.addEventListener('click', rpsClickHandler));
