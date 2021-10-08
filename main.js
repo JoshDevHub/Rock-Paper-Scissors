@@ -1,4 +1,4 @@
-const rpsArray = ["rock", "paper", "scissors"];
+const rpsArray = ['rock', 'paper', 'scissors'];
 let computerScore = 0;
 let userScore = 0;
 
@@ -10,14 +10,14 @@ const playRound = (userInput, computerInput) => {
   const userRPSIndex = rpsArray.indexOf(userInput);
   const computerRPSIndex = rpsArray.indexOf(computerInput);
   if (userInput === computerInput) {
-    resultArray.push("Draw");
+    resultArray.push('Draw');
   } else if (
     userRPSIndex - 1 === computerRPSIndex ||
     userRPSIndex + 2 === computerRPSIndex
   ) {
-    resultArray.push("Win");
+    resultArray.push('Win');
   } else {
-    resultArray.push("Lose");
+    resultArray.push('Lose');
   }
   console.log(resultArray);
   return resultArray;
@@ -25,16 +25,16 @@ const playRound = (userInput, computerInput) => {
 
 const drawResults = (resultInfo) => {
   const formatResult =
-    resultInfo[2] === "Draw" ? "It's a draw!" : `You ${resultInfo[2]}!`;
+    resultInfo[2] === 'Draw' ? "It's a draw!" : `You ${resultInfo[2]}!`;
 
-  const resultDisplay = document.querySelector(".round-outcome");
+  const resultDisplay = document.querySelector('.round-outcome');
   resultDisplay.textContent = `The threw ${resultInfo[0]} ... the computer throws ${resultInfo[1]}. ${formatResult}`;
 };
 
 const trackScore = (result) => {
-  const scoreDisplay = document.querySelector(".total-score");
-  if (result === "Win") userScore++;
-  if (result === "Lose") computerScore++;
+  const scoreDisplay = document.querySelector('.total-score');
+  if (result === 'Win') userScore++;
+  if (result === 'Lose') computerScore++;
   scoreDisplay.textContent = `The score is You: ${userScore} - Computer: ${computerScore}`;
 };
 
@@ -49,4 +49,4 @@ const clickHandler = (event) => {
   trackScore(result[2]);
 };
 
-buttons.forEach((button) => button.addEventListener("click", clickHandler));
+buttons.forEach((button) => button.addEventListener('click', clickHandler));
