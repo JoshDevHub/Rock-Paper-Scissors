@@ -2,14 +2,9 @@ const rpsArray = ['rock', 'paper', 'scissors'];
 let computerScore = 0;
 let userScore = 0;
 
-const isGameOver = () => {
-  return computerScore >= 5 || userScore >= 5;
-}
-
 const showGameOverModal = () => {
   const modalBox = document.querySelector('.modal-box');
-  const gameOver = isGameOver();
-  if (gameOver) modalBox.classList.add('modal-show');
+  if (computerScore >= 5 || userScore >= 5) modalBox.classList.add('modal-show');
 }
 
 const computerPlay = () => rpsArray[Math.floor(Math.random() * 3)];
@@ -49,10 +44,12 @@ const trackScore = (result) => {
 };
 
 const resetGame = () => {
-  const modalBox = document.querySelector('.modal-box');
-  modalBox.classList.remove('.modal-show');
   computerScore = 0;
   userScore = 0;
+
+  const modalBox = document.querySelector('.modal-box');
+  modalBox.classList.remove('modal-show');
+  trackScore('empty');
 }
 
 const resetButton = document.querySelector('.modal-btn');
@@ -68,5 +65,5 @@ const rpsClickHandler = (event) => {
   showGameOverModal();
 };
 
-const rpsButtons = document.querySelectorAll("rps-btn");
+const rpsButtons = document.querySelectorAll('.rps-btn');
 rpsButtons.forEach((button) => button.addEventListener('click', rpsClickHandler));
