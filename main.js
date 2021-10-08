@@ -57,7 +57,7 @@ resetButton.addEventListener('click', resetGame);
 
 const rpsClickHandler = (event) => {
   console.log(event.target.className);
-  const userInput = event.target.className.split(' ')[1];
+  const userInput = event.target.getAttribute('data');
   const computerInput = computerPlay();
   const result = playRound(userInput, computerInput);
   drawResults(result);
