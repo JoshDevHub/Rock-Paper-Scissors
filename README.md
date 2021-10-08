@@ -11,8 +11,16 @@ How the game works:
 
 Work has begun on a UI
 
-* [ ] Create a modal that pops up when the gamestate has been decided. (first to 5 wins?) Allows player to retry and reset the game.
-* [ ] Polish the styling -- develop color scheme. Possibly alter style on score output.
+### Modal
+* [x] Create a gameover modal that pops up when the gamestate has been decided. (first to 5 wins?) Allows player to retry and reset the game.
+* [ ] Expand modal to cover a larger area of the screen.
+* [ ] Ensure game is not playable while gameover modal is overlaying the page.
+* [ ] Animate the Modal?
+
+### General Styling
+* [ ] Develop color scheme
+* [ ] Change font for the score values.
+* [ ] Style the Buttons
 
 ## Special Thanks
 
