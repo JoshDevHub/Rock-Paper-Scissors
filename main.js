@@ -4,8 +4,10 @@ let userScore = 0;
 
 const showGameOverModal = () => {
   const modalBox = document.querySelector('.modal-box');
-  if (computerScore >= 5 || userScore >= 5) modalBox.classList.add('modal-show');
-}
+  if (computerScore >= 5 || userScore >= 5) {
+    modalBox.classList.add('modal-show');
+  }
+};
 
 const computerPlay = () => rpsArray[Math.floor(Math.random() * 3)];
 
@@ -43,14 +45,22 @@ const trackScore = (result) => {
   scoreDisplay.textContent = `The score is You: ${userScore} - Computer: ${computerScore}`;
 };
 
+const resetResultsBox = () => {
+  const scoreDisplay = document.querySelector('.total-score');
+  scoreDisplay.textContent = 'First to Five Wins!';
+  const resultDisplay = document.querySelector('.round-outcome');
+  resultDisplay.textContent = 'Click a button to Play!';
+};
+
 const resetGame = () => {
   computerScore = 0;
   userScore = 0;
 
   const modalBox = document.querySelector('.modal-box');
   modalBox.classList.remove('modal-show');
-  trackScore('empty');
-}
+
+  resetResultsBox();
+};
 
 const resetButton = document.querySelector('.modal-btn');
 resetButton.addEventListener('click', resetGame);
@@ -66,4 +76,6 @@ const rpsClickHandler = (event) => {
 };
 
 const rpsButtons = document.querySelectorAll('.rps-btn');
-rpsButtons.forEach((button) => button.addEventListener('click', rpsClickHandler));
+rpsButtons.forEach((button) =>
+  button.addEventListener('click', rpsClickHandler)
+);
