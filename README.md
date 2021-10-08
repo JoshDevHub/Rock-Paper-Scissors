@@ -11,7 +11,7 @@ How the game works:
 
 Work has begun on a UI
 
-* [ ] Create a modal that pops up when the gamestate has been decided. (first to 3 wins?) Allows player to retry and reset the game.
+* [ ] Create a modal that pops up when the gamestate has been decided. (first to 5 wins?) Allows player to retry and reset the game.
 * [ ] Polish the styling -- develop color scheme. Possibly alter style on score output.
 
 ## Special Thanks
