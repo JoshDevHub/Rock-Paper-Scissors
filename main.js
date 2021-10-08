@@ -2,6 +2,16 @@ const rpsArray = ['rock', 'paper', 'scissors'];
 let computerScore = 0;
 let userScore = 0;
 
+const isGameOver = () => {
+  return computerScore >= 5 || userScore >= 5;
+}
+
+const showGameOverModal = () => {
+  const modalBox = document.querySelector('.modal-box');
+  const gameOver = isGameOver();
+  if (gameOver) modalBox.classList.add('modal-show');
+}
+
 const computerPlay = () => rpsArray[Math.floor(Math.random() * 3)];
 
 const playRound = (userInput, computerInput) => {
@@ -28,7 +38,7 @@ const drawResults = (resultInfo) => {
     resultInfo[2] === 'Draw' ? "It's a draw!" : `You ${resultInfo[2]}!`;
 
   const resultDisplay = document.querySelector('.round-outcome');
-  resultDisplay.textContent = `The threw ${resultInfo[0]} ... the computer throws ${resultInfo[1]}. ${formatResult}`;
+  resultDisplay.textContent = `You threw ${resultInfo[0]} ... the computer throws ${resultInfo[1]}. ${formatResult}`;
 };
 
 const trackScore = (result) => {
@@ -47,6 +57,7 @@ const clickHandler = (event) => {
   const result = playRound(userInput, computerInput);
   drawResults(result);
   trackScore(result[2]);
+  showGameOverModal();
 };
 
 buttons.forEach((button) => button.addEventListener('click', clickHandler));
