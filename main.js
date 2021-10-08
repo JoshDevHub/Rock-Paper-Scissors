@@ -23,12 +23,12 @@ const playRound = (userInput, computerInput) => {
 const drawResults = (resultInfo) => {
   const formatResult = resultInfo[2] === 'Draw' ? "It's a draw!" : `You ${resultInfo[2]}!`
 
-  const resultDisplay = document.querySelector('.results p');
+  const resultDisplay = document.querySelector('.round-outcome');
   resultDisplay.textContent = `The threw ${resultInfo[0]} ... the computer throws ${resultInfo[1]}. ${formatResult}`;
 }
 
 const trackScore = (result) => {
-  const scoreDisplay = document.querySelector('.results h3');
+  const scoreDisplay = document.querySelector('.total-score');
   if (result === 'Win') userScore++;
   if (result === 'Lose') computerScore++;
   scoreDisplay.textContent = `The score is You: ${userScore} - Computer: ${computerScore}`;
