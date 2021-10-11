@@ -8,10 +8,10 @@ const getComputerInput = () =>
 const playRound = (userInput, computerInput) => {
   let result = '';
 
- /**
-  * Using index arithmetic with the rpsArray to check the winner saves a lot of 
-  * lines & avoids messy, nested conditional checking.
-  */ 
+  /**
+   * Using index arithmetic with the rpsArray to check the winner saves a lot of
+   * lines & avoids messy, nested conditional checking.
+   */
   const userRPSIndex = rpsArray.indexOf(userInput);
   const computerRPSIndex = rpsArray.indexOf(computerInput);
   if (userInput === computerInput) {
@@ -67,8 +67,10 @@ const resetClickHandler = () => {
   resetResultsBox();
 };
 
-const modalResult = document.querySelector('.modal-result');
-modalResult.textContent = userScore > 4 ? 'You Win!' : 'Computer Wins';
+const displayWinner = () => {
+  const modalResult = document.querySelector('.modal-result');
+  modalResult.textContent = userScore > 4 ? 'You Win!' : 'You Lose';
+};
 
 const resetButton = document.querySelector('.modal-btn');
 resetButton.addEventListener('click', resetClickHandler);
@@ -79,7 +81,10 @@ const rpsClickHandler = (event) => {
   const result = playRound(userInput, computerInput);
   drawResults(userInput, computerInput, result);
   drawScore();
-  if (isGameOver()) toggleModal();
+  if (isGameOver()) {
+    toggleModal();
+    displayWinner();
+  }
 };
 
 const rpsButtons = document.querySelectorAll('.rps-btn');
