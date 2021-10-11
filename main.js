@@ -47,7 +47,9 @@ const isGameOver = () => {
 
 const toggleModal = () => {
   const modalBox = document.querySelector('.modal-box');
-  modalBox.classList.toggle('modal-show');
+  const modalOverlay = document.querySelector('.modal-overlay');
+  modalBox.classList.toggle('closed');
+  modalOverlay.classList.toggle('closed');
 };
 
 const resetResultsBox = () => {
