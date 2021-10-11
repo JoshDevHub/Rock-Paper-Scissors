@@ -67,6 +67,9 @@ const resetClickHandler = () => {
   resetResultsBox();
 };
 
+const modalResult = document.querySelector('.modal-result');
+modalResult.textContent = userScore > 4 ? 'You Win!' : 'Computer Wins';
+
 const resetButton = document.querySelector('.modal-btn');
 resetButton.addEventListener('click', resetClickHandler);
 
