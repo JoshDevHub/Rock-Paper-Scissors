@@ -77,7 +77,7 @@ button:hover {
   width: 100%;
   height: 100%;
   z-index: 50;
-  background: hsla(0, 0, 0, 0.6);
+  background: hsla(0, 0%, 0%, 0.6);
 }
 
 .modal-box {
@@ -123,6 +123,15 @@ footer {
 .footer-links a:hover {
   background-color: var(--dark-blue-color);
   color: var(--main-light-color);
+}
+
+.results-container {
+  font-size: 1.5rem;
+}
+
+.results-container span {
+  color: var(--orange-color);
+  /* font-size: 2rem; */
 }
 
 /* TODO Play with color scheme */
