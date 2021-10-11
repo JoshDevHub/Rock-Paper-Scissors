@@ -69,7 +69,7 @@ const resetClickHandler = () => {
 
 const displayWinner = () => {
   const modalResult = document.querySelector('.modal-result');
-  modalResult.textContent = userScore > 4 ? 'You Win!' : 'You Lose';
+  modalResult.textContent = userScore > computerScore ? 'You Win!' : 'You Lose';
 };
 
 const resetButton = document.querySelector('.modal-btn');
