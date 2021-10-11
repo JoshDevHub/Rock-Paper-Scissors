@@ -2,13 +2,6 @@ const rpsArray = ['rock', 'paper', 'scissors'];
 let computerScore = 0;
 let userScore = 0;
 
-const showGameOverModal = () => {
-  const modalBox = document.querySelector('.modal-box');
-  if (computerScore >= 5 || userScore >= 5) {
-    modalBox.classList.add('modal-show');
-  }
-};
-
 const computerPlay = () => rpsArray[Math.floor(Math.random() * 3)];
 
 const playRound = (userInput, computerInput) => {
@@ -45,6 +38,15 @@ const trackScore = (result) => {
   scoreDisplay.textContent = `The score is You: ${userScore} - Computer: ${computerScore}`;
 };
 
+const isGameOver = () => {
+  return computerScore > 4 || userScore > 4;
+}
+
+const toggleModal = () => {
+  const modalBox = document.querySelector('.modal-box');
+  modalBox.classList.toggle('modal-show');
+}
+
 const resetResultsBox = () => {
   const scoreDisplay = document.querySelector('.total-score');
   scoreDisplay.textContent = 'First to Five Wins!';
@@ -56,8 +58,7 @@ const resetGame = () => {
   computerScore = 0;
   userScore = 0;
 
-  const modalBox = document.querySelector('.modal-box');
-  modalBox.classList.remove('modal-show');
+  toggleModal();
 
   resetResultsBox();
 };
@@ -72,7 +73,10 @@ const rpsClickHandler = (event) => {
   const result = playRound(userInput, computerInput);
   drawResults(result);
   trackScore(result[2]);
-  showGameOverModal();
+  const gamestate = isGameOver();
+  if (gamestate) {
+    toggleModal();
+  }
 };
 
 const rpsButtons = document.querySelectorAll('.rps-btn');
