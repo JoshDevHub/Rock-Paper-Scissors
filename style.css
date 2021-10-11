@@ -1,10 +1,10 @@
 /* Universal Styles & Resets */
 :root {
-  --dark-blue-color: #001736;
-  --main-bg-color: #353D40;
-  --main-blue-color: #003F63;
-  --main-light-color: #d9d9d9;
-  --orange-color: #F2B138;
+  --dark-blue-color: hsl(214, 100%, 11%);
+  --main-bg-color: hsl(196, 9%, 23%);
+  --main-blue-color: hsl(202, 100%, 19%);
+  --main-light-color: hsl(0, 0%, 85%);
+  --orange-color: hsl(39, 88%, 58%);
 }
 
 *, *::before, *::after {
