@@ -67,5 +67,11 @@ button {
   display: block;
 }
 
+footer {
+  background-color: #003F63;
+  width: 100%;
+  color: #F2B138;
+}
+
 /* TODO Play with color scheme */
 
