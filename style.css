@@ -41,7 +41,7 @@ h2 {
   /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
-  width: 65%;
+  min-width: 60%;
 }
 
 /* More styling needed */
