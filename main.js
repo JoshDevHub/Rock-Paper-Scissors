@@ -38,7 +38,7 @@ const drawResults = (userInput, computerInput, result) => {
 
 const drawScore = () => {
   const scoreDisplay = document.querySelector('.total-score');
-  scoreDisplay.textContent = `The score is You: ${userScore} - Computer: ${computerScore}`;
+  scoreDisplay.innerHTML = `The score is You: <span>${userScore}</span> - Computer: <span>${computerScore}</span>`;
 };
 
 const isGameOver = () => {
