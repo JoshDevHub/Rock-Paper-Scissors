@@ -2,7 +2,8 @@ const rpsArray = ['rock', 'paper', 'scissors'];
 let computerScore = 0;
 let userScore = 0;
 
-const computerPlay = () => rpsArray[Math.floor(Math.random() * 3)];
+const getComputerInput = () =>
+  rpsArray[Math.floor(Math.random() * rpsArray.length)];
 
 const playRound = (userInput, computerInput) => {
   const resultArray = [userInput, computerInput];
@@ -40,12 +41,12 @@ const trackScore = (result) => {
 
 const isGameOver = () => {
   return computerScore > 4 || userScore > 4;
-}
+};
 
 const toggleModal = () => {
   const modalBox = document.querySelector('.modal-box');
   modalBox.classList.toggle('modal-show');
-}
+};
 
 const resetResultsBox = () => {
   const scoreDisplay = document.querySelector('.total-score');
@@ -69,7 +70,7 @@ resetButton.addEventListener('click', resetGame);
 const rpsClickHandler = (event) => {
   console.log(event.target.className);
   const userInput = event.target.getAttribute('data');
-  const computerInput = computerPlay();
+  const computerInput = getComputerInput();
   const result = playRound(userInput, computerInput);
   drawResults(result);
   trackScore(result[2]);
