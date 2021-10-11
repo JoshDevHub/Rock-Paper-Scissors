@@ -51,6 +51,12 @@ button {
   font-size: 5rem;
   color: #003F63;
   border-radius: 10px;
+  transition: all 0.16s ease;
+}
+
+button:hover {
+  background-color: #003F63;
+  color: #D9D9D9;
 }
 
 .paper {
