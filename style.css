@@ -29,7 +29,7 @@ h1 {
   font-weight: 900;
   background-color: #003F63;
   padding: 1.5rem;
-  color: #D37765;
+  color: #F2B138;
   border: 2px solid white;
 }
 
@@ -71,6 +71,33 @@ footer {
   background-color: #003F63;
   width: 100%;
   color: #F2B138;
+}
+
+.footer-links {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0.5rem;
+}
+
+.footer-links li+li {
+  border-left: 1px solid #F2B138;
+  padding-left: 1rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #F2B138;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.footer-links a:hover {
+  background-color: #001736;
+  color: #D9D9D9;
 }
 
 /* TODO Play with color scheme */
