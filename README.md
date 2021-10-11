@@ -3,24 +3,19 @@
 This is a project done as part of [The Odin Project](https://www.theodinproject.com/)
 
 How the game works:
-- Runs a game of rock, paper, scissors through the browser console.
-- User is prompted for input and plays against the "computer", which selects among rock, paper, and scissors at random.
-- The game is played best out of 5 rounds. The first player to win 3 rounds wins the game.
+- Runs a game of rock, paper, scissors in the browser.
+- User clicks on buttons to make a choice. The user's choice goes up against a random selection made by the program.
+- The game is played until either the user or the computer has accumulated 5 wins, when an overall winner is determined.
 
-## TODO
+## Low Priority TODO
 
-Work has begun on a UI
+Low priority because I want to move on in the course but could be fun rainy Saturday work. 
 
-### Modal
-* [x] Create a gameover modal that pops up when the gamestate has been decided. (first to 5 wins?) Allows player to retry and reset the game.
-* [ ] Expand modal to cover a larger area of the screen.
-* [ ] Ensure game is not playable while gameover modal is overlaying the page.
-* [ ] Animate the Modal?
-
-### General Styling
-* [ ] Develop color scheme
-* [ ] Change font for the score values.
-* [ ] Style the Buttons
+* [ ] Animate the Modal
+* [ ] Animate the RPS button icons (bounce/bob effect?)
+* [ ] Computer choice is highlighted on the button.
+* [ ] More decorative scoring section.
+* [ ] Log of the moves throughout the game displayed in the modal.
 
 ## Special Thanks
 
