@@ -16,8 +16,8 @@ Low priority because I want to move on in the course but could be fun rainy Satu
 * [ ] Computer choice is highlighted on the button.
 * [ ] More decorative scoring section.
 * [ ] Log of the moves throughout the game displayed in the modal.
+* [ ] Make more responsive. Layout breaks down on smaller mobile screens.
 
 ## Special Thanks
 
 To the folks at The Odin Project for their web development course.
-
